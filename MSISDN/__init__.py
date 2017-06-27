@@ -15,6 +15,8 @@ class Parser(object):
 
         country_codes = dict()
         mno_providers = dict()
+        country_dialing_code = None
+        country_identifier = None
         mno_identifier = None
         subscriber_number = None
 
