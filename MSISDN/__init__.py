@@ -1,7 +1,9 @@
+# coding=utf-8
+
 from difflib import Differ
 
 
-class ParseMSISDN(object):
+class Parser(object):
     @classmethod
     def transform(cls, msisdn):
         if msisdn[0] == '+':
