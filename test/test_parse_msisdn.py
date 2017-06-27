@@ -62,12 +62,12 @@ class TestParseMSISDN(unittest.TestCase):
     def test_subscriber_number(self):
         msisdn = "38976123456"
         result = ParseMSISDN.transform(msisdn)
-        self.assertEqual(result['subscriber_number'], "123456")
+        self.assertEqual(result['subscriber_number'], "76123456")
 
     def test_subscriber_number_with_leading_plus(self):
         msisdn = "+38976123456"
         result = ParseMSISDN.transform(msisdn)
-        self.assertEqual(result['subscriber_number'], "123456")
+        self.assertEqual(result['subscriber_number'], "76123456")
 
     def test_nonexisting_number(self):
         msisdn = "99999999999"
@@ -83,7 +83,7 @@ class TestParseMSISDN(unittest.TestCase):
         self.assertEqual(result['country_identifier'], "SI")
         self.assertEqual(result['country_dialing_code'], "386")
         self.assertEqual(result['mno_identifier'], "Si.mobil")
-        self.assertEqual(result['subscriber_number'], "658494")
+        self.assertEqual(result['subscriber_number'], "40658494")
 
 if __name__ == '__main__':
     unittest.main()
