@@ -1,6 +1,7 @@
 # coding=utf-8
 
 from difflib import Differ
+from os.path import dirname, join
 
 
 class Parser(object):
@@ -20,12 +21,14 @@ class Parser(object):
         mno_identifier = None
         subscriber_number = None
 
-        with open('country_codes', 'r') as f:
+        script_dir = dirname(__file__)
+
+        with open(join(script_dir, 'country_codes'), 'r') as f:
             for line in f:
                 (key, val) = line.split(' ', 1)
                 country_codes[key.strip()] = val.strip()
 
-        with open('mno_providers', 'r') as f:
+        with open(join(script_dir, 'mno_providers'), 'r') as f:
             for line in f:
                 (key, val) = line.split(' ', 1)
                 mno_providers[key.strip()] = val.strip()

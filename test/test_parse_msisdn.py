@@ -5,7 +5,7 @@ import unittest
 from MSISDN import Parser
 
 
-class TestParseMSISDN(unittest.TestCase):
+class TestMSISDNParser(unittest.TestCase):
     def test_result_is_dict(self):
         msisdn = "38976123456"
         result = Parser.transform(msisdn)
