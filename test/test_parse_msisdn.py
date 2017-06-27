@@ -85,5 +85,9 @@ class TestParseMSISDN(unittest.TestCase):
         self.assertEqual(result['mno_identifier'], "Si.mobil")
         self.assertEqual(result['subscriber_number'], "40658494")
 
+    def test_nonexisting_number2(self):
+        msisdn = "+35345"
+        self.assertRaises(Exception, ParseMSISDN.transform, msisdn)
+
 if __name__ == '__main__':
     unittest.main()

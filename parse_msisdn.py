@@ -13,6 +13,8 @@ class ParseMSISDN(object):
 
         country_codes = dict()
         mno_providers = dict()
+        mno_identifier = None
+        subscriber_number = None
 
         with open('country_codes', 'r') as f:
             for line in f:
