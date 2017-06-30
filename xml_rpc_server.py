@@ -2,15 +2,11 @@
 
 from __future__ import print_function
 
-import logging
 from SimpleXMLRPCServer import SimpleXMLRPCRequestHandler
 from SimpleXMLRPCServer import SimpleXMLRPCServer
 from xml.etree.ElementTree import Element
 
 from MSISDN import Parser
-
-# Set up logging
-logging.basicConfig(level=logging.DEBUG)
 
 
 class RequestHandler(SimpleXMLRPCRequestHandler):
